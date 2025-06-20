@@ -81,7 +81,7 @@ function JobLisiting() {
                     job.featured ? "border-l-dark-cyan" : "border-l-transparent"
                   }`}
                 >
-                  <div className="flex items-start lg:items-center gap-6">
+                  <div className="flex lg: flex-row items-start lg:items-center gap-6 sm: flex-col">
                     <img
                       src={job.logo}
                       alt={`${job.company} logo`}
@@ -95,11 +95,11 @@ function JobLisiting() {
                         <span>{RatingFeatures(job)}</span>
                       </div>
 
-                      <p className="text-black text-lg font-bold text-very-dark-cyan hover:text-dark-cyan cursor-pointer">
+                      <p className="text-black text-lg font-bold text-very-dark-cyan hover:text-dark-cyan cursor-pointer sm: text-left">
                         {job.position}
                       </p>
 
-                      <div className="flex gap-4 text-gray-500 text-sm">
+                      <div className="flex gap-4 text-gray-500 text-sm sm: text-xs">
                         <span>{job.postedAt}</span>
                         <span>•</span>
                         <span>{job.contract}</span>
@@ -109,7 +109,7 @@ function JobLisiting() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-4 mt-4 lg:mt-0 lg:justify-end text-dark-cyan font-semibold text-sm">
+                  <div className="flex flex-wrap gap-4 mt-4 lg:mt-0 lg:justify-end text-dark-cyan font-semibold text-sm lg:border-none sm: border-t py-5">
                     <button
                       onClick={() => setSelectedRole(job.role)}
                       className="text-blue-500 bg-indigo-300 px-3 py-1 rounded-md hover:bg-dark-cyan hover:text-white transition"

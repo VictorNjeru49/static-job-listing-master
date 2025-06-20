@@ -1,6 +1,6 @@
-import dataJson from "../data.json";
+import data from "../data.json";
 
-export type Job = (typeof dataJson)[0];
+export type Job = (typeof data)[0];
 
 export interface State {
   data: Job[];
@@ -11,7 +11,7 @@ export type Action =
 | {type: 'FETCH_FAILURE'; payload: string}
 
 export const initialState: State = {
-    data: dataJson
+    data: data
 }
 
 export function Reducer(state: State, action: Action) {
